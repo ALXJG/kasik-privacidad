@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Resona</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 5rem;
+    color: #262b26;
+    background: #f7f4ee;
+  }
+  h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.3rem; margin-top: 2.5rem; border-bottom: 1px solid #e3ddd0; padding-bottom: .35rem; }
+  h3 { font-size: 1.05rem; margin-top: 1.75rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .93rem; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #e3ddd0; padding: .5rem .6rem; text-align: left; vertical-align: top; }
+  th { background: #efeae0; }
+  code { background: #efeae0; padding: .1rem .35rem; border-radius: 4px; font-size: .9em; }
+  .meta { color: #5d665e; font-size: .95rem; }
+  .destacado { background: #eef3ee; border-left: 3px solid #3e5648; padding: .9rem 1.1rem; border-radius: 6px; }
+  footer { margin-top: 3rem; color: #5d665e; font-size: .9rem; border-top: 1px solid #e3ddd0; padding-top: 1rem; }
+  a { color: #3e5648; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e9e5da; background: #171b18; }
+    h2 { border-bottom-color: #333b34; }
+    th, td { border-color: #333b34; }
+    th, code { background: #292f2a; }
+    .meta, footer { color: #a7b0a7; }
+    .destacado { background: #1f2420; border-left-color: #a9c4b0; }
+    footer { border-top-color: #333b34; }
+    a { color: #a9c4b0; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Política de privacidad de Resona</h1>
+<p class="meta"><strong>Última actualización:</strong> 1 de agosto de 2026<br>
+<strong>Aplicación:</strong> Resona (<code>app.resona.bienestar</code>)</p>
+
+<h2>Resumen en una frase</h2>
+<p class="destacado">Resona no recoge, transmite ni comparte ningún dato personal.
+Todo lo que escribes, respondes o grabas se queda en tu dispositivo.</p>
+
+<h2>Qué datos guarda la aplicación</h2>
+<p>Resona guarda estos datos <strong>únicamente en el almacenamiento local de tu
+dispositivo</strong> (IndexedDB, con respaldo en <code>localStorage</code>):</p>
+
+<table>
+<tr><th>Dato</th><th>Qué es</th><th>Origen</th></tr>
+<tr><td>Nombre o apodo</td><td>Opcional, para dirigirse a ti</td><td>Lo escribes tú</td></tr>
+<tr><td>Trato preferido</td><td>Femenino, masculino o neutro</td><td>Lo eliges tú</td></tr>
+<tr><td>Respuestas del cuestionario</td><td>Base del perfil motivacional</td><td>Las respondes tú</td></tr>
+<tr><td>Perfil motivacional</td><td>Inferencias sobre tus dominios de valor y necesidades</td><td>Lo calcula la app a partir de tus respuestas</td></tr>
+<tr><td>Check-ins de ánimo y energía</td><td>Registro emocional breve</td><td>Lo registras tú</td></tr>
+<tr><td>Diario</td><td>Texto libre que escribes</td><td>Lo escribes tú</td></tr>
+<tr><td>Hábitos y su cumplimiento</td><td>Nombres y marcas diarias</td><td>Los defines tú</td></tr>
+<tr><td>Racha y sesiones de herramientas</td><td>Días de uso y actividad</td><td>Los genera tu uso</td></tr>
+<tr><td>Historial y valoración de frases</td><td>Qué frases viste y qué opinaste</td><td>Lo genera tu uso</td></tr>
+<tr><td>Grabaciones de ambiente</td><td>Audio que grabas con el micrófono</td><td>Lo grabas tú</td></tr>
+<tr><td>Preferencias</td><td>Idioma, tema, horarios de aviso, vibración</td><td>Las eliges tú</td></tr>
+</table>
+
+<p><strong>Ningún dato de esta tabla sale del dispositivo.</strong></p>
+
+<h2>Qué NO hace Resona</h2>
+<ul>
+<li><strong>No tiene servidores.</strong> No existe ningún backend al que enviar datos.</li>
+<li><strong>No tiene cuentas ni registro.</strong> No hay usuario, correo ni contraseña.</li>
+<li><strong>No usa analítica, telemetría ni SDK de terceros de seguimiento.</strong></li>
+<li><strong>No muestra publicidad.</strong></li>
+<li><strong>No comparte datos con terceros.</strong></li>
+<li><strong>No rastrea tu ubicación.</strong></li>
+<li><strong>No lee tus contactos, tu agenda ni tus archivos.</strong></li>
+</ul>
+
+<h3>Garantía técnica verificable</h3>
+<p>Resona <strong>no declara el permiso <code>android.permission.INTERNET</code></strong>
+en su manifiesto. Sin ese permiso, el sistema operativo Android <strong>impide</strong>
+que la aplicación abra cualquier conexión de red. No es una promesa de intenciones:
+es una restricción que aplica el propio sistema y que cualquiera puede comprobar
+inspeccionando el archivo APK/AAB publicado.</p>
+
+<h2>Permisos que solicita la aplicación, y para qué</h2>
+<table>
+<tr><th>Permiso</th><th>Para qué se usa</th><th>Cuándo se pide</th></tr>
+<tr><td><code>RECORD_AUDIO</code> (micrófono)</td><td>Grabar sonidos de tu entorno para usarlos como sonido de fondo. La grabación se guarda solo en tu dispositivo.</td><td>Solo si abres la función de grabación</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Mostrar el recordatorio diario, la frase del día y el aviso de sesión de respiración en curso</td><td>Al activar los avisos o iniciar una sesión de respiración</td></tr>
+<tr><td><code>VIBRATE</code></td><td>Pulso de vibración al terminar cada fase de la respiración guiada</td><td>Automático, sin diálogo</td></tr>
+<tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Entregar el recordatorio diario a la hora exacta que elijas</td><td>Lo concedes desde los ajustes del sistema, si quieres puntualidad al minuto</td></tr>
+<tr><td><code>FOREGROUND_SERVICE</code> y <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Mantener el pulso de vibración de una sesión de respiración activa mientras la pantalla está bloqueada</td><td>Automático durante una sesión iniciada por ti</td></tr>
+<tr><td><code>WAKE_LOCK</code></td><td>Mantener la CPU activa (sin encender la pantalla) durante esa misma sesión</td><td>Automático durante una sesión iniciada por ti</td></tr>
+<tr><td><code>MODIFY_AUDIO_SETTINGS</code></td><td>Reproducir correctamente los sonidos ambientales y las pistas de audio</td><td>Automático, sin diálogo</td></tr>
+</table>
+<p>Ninguno de estos permisos se usa para recoger información sobre ti.</p>
+
+<h2>Compartir contenido (acción iniciada por ti)</h2>
+<p>Si pulsas <strong>Compartir mi avance</strong>, la aplicación genera una imagen con
+tu árbol de bienestar y tu racha, y abre la hoja de compartir del sistema para que tú
+elijas a dónde enviarla. Resona no elige el destino ni envía nada por su cuenta. El
+archivo temporal se borra de la caché después de compartir, tanto si completas el envío
+como si lo cancelas.</p>
+
+<h2>Copias de seguridad</h2>
+<p>La aplicación declara <code>allowBackup="false"</code>. Android <strong>no</strong>
+incluye tus datos de Resona en la copia de seguridad automática a la nube de Google.</p>
+
+<h2>Contribución voluntaria</h2>
+<p>Si en el futuro se habilita la contribución voluntaria, el cobro se realizará
+íntegramente a través de <strong>Google Play Billing</strong>. Resona no ve, no recibe y
+no almacena datos de pago: los gestiona Google. Contribuir es opcional y <strong>ninguna
+función de la aplicación se limita</strong> por no hacerlo.</p>
+
+<h2>Tus derechos sobre tus datos</h2>
+<p>Como todos los datos están en tu dispositivo y bajo tu control:</p>
+<ul>
+<li><strong>Verlos:</strong> el perfil es consultable desde <em>Ajustes → Mi perfil</em>.</li>
+<li><strong>Editarlos:</strong> el perfil y las preferencias son editables en cualquier momento.</li>
+<li><strong>Borrarlos:</strong> <em>Ajustes → Borrar todos mis datos</em> elimina todo —
+perfil, diario, check-ins, hábitos, grabaciones, historial y avisos programados— y deja
+la aplicación como recién instalada. La acción es inmediata e irreversible, y no
+requiere conexión ni intervención de nadie.</li>
+<li><strong>Desinstalar:</strong> al desinstalar la aplicación, todos sus datos locales
+desaparecen con ella.</li>
+</ul>
+<p>No hace falta escribir a nadie ni esperar respuesta para ejercer estos derechos.</p>
+
+<h2>Menores de edad</h2>
+<p>Resona no está dirigida específicamente a menores de 13 años y no recoge datos de
+ninguna persona, independientemente de su edad.</p>
+
+<h2>Aviso importante sobre salud</h2>
+<p>Resona es una aplicación de bienestar y hábitos. <strong>No es un dispositivo médico,
+no proporciona diagnóstico y no sustituye la atención de un profesional de la salud
+mental.</strong> Las inferencias del perfil se presentan siempre como sugerencias
+revisables, nunca como conclusiones clínicas. Si atraviesas una crisis, acude a los
+servicios de emergencia o a una línea de ayuda de tu país.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si en el futuro la aplicación empezara a tratar datos de forma distinta, esta política
+se actualizaría antes del cambio y se reflejaría en la ficha de Google Play y en las
+notas de versión.</p>
+
+<h2>Contacto</h2>
+<p><strong>Correo:</strong> <a href="mailto:alfxanderjg@gmail.com">alfxanderjg@gmail.com</a></p>
+
+<footer>Resona · Política de privacidad · Última actualización: 1 de agosto de 2026</footer>
+
+</body>
+</html>
