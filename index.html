@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Política de privacidad — Resona</title>
+<title>Política de privacidad — KASIK</title>
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -40,16 +40,16 @@
 </head>
 <body>
 
-<h1>Política de privacidad de Resona</h1>
+<h1>Política de privacidad de KASIK</h1>
 <p class="meta"><strong>Última actualización:</strong> 2 de agosto de 2026<br>
-<strong>Aplicación:</strong> Resona (<code>app.resona.bienestar</code>)</p>
+<strong>Aplicación:</strong> KASIK (<code>app.kasik.bienestar</code>)</p>
 
 <h2>Resumen en una frase</h2>
-<p class="destacado">Resona no recoge, transmite ni comparte ningún dato personal.
+<p class="destacado">KASIK no recoge, transmite ni comparte ningún dato personal.
 Todo lo que escribes, respondes o grabas se queda en tu dispositivo.</p>
 
 <h2>Qué datos guarda la aplicación</h2>
-<p>Resona guarda estos datos <strong>únicamente en el almacenamiento local de tu
+<p>KASIK guarda estos datos <strong>únicamente en el almacenamiento local de tu
 dispositivo</strong> (IndexedDB, con respaldo en <code>localStorage</code>):</p>
 
 <table>
@@ -69,7 +69,7 @@ dispositivo</strong> (IndexedDB, con respaldo en <code>localStorage</code>):</p>
 
 <p><strong>Ningún dato de esta tabla sale del dispositivo.</strong></p>
 
-<h2>Qué NO hace Resona</h2>
+<h2>Qué NO hace KASIK</h2>
 <ul>
 <li><strong>No tiene servidores.</strong> No existe ningún backend al que enviar datos.</li>
 <li><strong>No tiene cuentas ni registro.</strong> No hay usuario, correo ni contraseña.</li>
@@ -80,12 +80,34 @@ dispositivo</strong> (IndexedDB, con respaldo en <code>localStorage</code>):</p>
 <li><strong>No lee tus contactos, tu agenda ni tus archivos.</strong></li>
 </ul>
 
-<h3>Garantía técnica verificable</h3>
-<p>Resona <strong>no declara el permiso <code>android.permission.INTERNET</code></strong>
-en su manifiesto. Sin ese permiso, el sistema operativo Android <strong>impide</strong>
-que la aplicación abra cualquier conexión de red. No es una promesa de intenciones:
-es una restricción que aplica el propio sistema y que cualquiera puede comprobar
-inspeccionando el archivo APK/AAB publicado.</p>
+<h3>Lo que sí sale del dispositivo, y es lo único</h3>
+<p>KASIK ofrece <strong>KASIK Pro</strong>, un pago único opcional que añade contenido
+nuevo. Ese cobro lo procesa <strong>Google Play</strong>, no nosotros, y para que
+funcione la aplicación incluye la biblioteca de facturación de Google, que declara el
+permiso <code>android.permission.INTERNET</code>.</p>
+<ul>
+<li><strong>Nosotros seguimos sin tener servidores.</strong> No hay ningún sitio nuestro
+al que puedan llegar tus datos, porque no existe.</li>
+<li><strong>La conexión es con Google Play y solo para la compra</strong>: comprobar si
+tienes Pro y procesar el pago. Esos datos los trata Google conforme a su propia política,
+igual que con cualquier compra en su tienda.</li>
+<li><strong>Tu diario, tus hábitos, tus sonidos y tu perfil no viajan a ninguna parte.</strong>
+Ni al comprar, ni después.</li>
+<li>Si nunca compras Pro, la aplicación <strong>nunca abre una conexión</strong>.</li>
+</ul>
+<p>Hasta la versión con Pro, la aplicación no declaraba el permiso de Internet y por eso
+prometía que no <em>podía</em> conectarse. Esa frase ya no sería cierta y se retiró
+<strong>antes de publicar, no después</strong>.</p>
+
+<h3>Autenticación y exportación del diario</h3>
+<ul>
+<li>Puedes pedir <strong>tu huella, tu rostro o el código del teléfono</strong> para abrir
+el diario y para exportarlo. <strong>KASIK nunca recibe datos biométricos</strong>: el
+sistema operativo responde solo «sí» o «no».</li>
+<li>La <strong>exportación a PDF se genera en tu propio teléfono</strong>. No pasa por
+ninguna red. Puedes ponerle contraseña de apertura, que es una protección modesta: una vez
+que el archivo sale de KASIK, quien lo tenga podrá leerlo.</li>
+</ul>
 
 <h2>Permisos que solicita la aplicación, y para qué</h2>
 <table>
@@ -93,6 +115,8 @@ inspeccionando el archivo APK/AAB publicado.</p>
 <tr><td><code>RECORD_AUDIO</code> (micrófono)</td><td>Grabar sonidos de tu entorno para usarlos como sonido de fondo. La grabación se guarda solo en tu dispositivo.</td><td>Solo si abres la función de grabación</td></tr>
 <tr><td><code>POST_NOTIFICATIONS</code></td><td>Mostrar el recordatorio diario, la frase del día y el aviso de sesión de respiración en curso</td><td>Al activar los avisos o iniciar una sesión de respiración</td></tr>
 <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Volver a programar tus avisos diarios después de reiniciar el teléfono, para que no se pierdan. La aplicación no se abre ni hace nada más al arrancar.</td><td>Automático, sin diálogo</td></tr>
+<tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>com.android.vending.BILLING</code></td><td>Procesar la compra de KASIK Pro a través de Google Play. Los declara la biblioteca de facturación de Google. Ningún dato tuyo viaja por ahí.</td><td>Automático, sin diálogo</td></tr>
+<tr><td><code>USE_BIOMETRIC</code></td><td>Pedir tu huella, tu rostro o el código del teléfono para abrir o exportar el diario, si tú lo activas. La app nunca recibe datos biométricos.</td><td>Solo si activas el bloqueo del diario</td></tr>
 <tr><td><code>VIBRATE</code></td><td>Pulso de vibración al terminar cada fase de la respiración guiada</td><td>Automático, sin diálogo</td></tr>
 <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Entregar el recordatorio diario a la hora exacta que elijas</td><td>Lo concedes desde los ajustes del sistema, si quieres puntualidad al minuto</td></tr>
 <tr><td><code>FOREGROUND_SERVICE</code> y <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Mantener el pulso de vibración de una sesión de respiración activa mientras la pantalla está bloqueada</td><td>Automático durante una sesión iniciada por ti</td></tr>
@@ -104,17 +128,17 @@ inspeccionando el archivo APK/AAB publicado.</p>
 <h2>Compartir contenido (acción iniciada por ti)</h2>
 <p>Si pulsas <strong>Compartir mi avance</strong>, la aplicación genera una imagen con
 tu árbol de bienestar y tu racha, y abre la hoja de compartir del sistema para que tú
-elijas a dónde enviarla. Resona no elige el destino ni envía nada por su cuenta. El
+elijas a dónde enviarla. KASIK no elige el destino ni envía nada por su cuenta. El
 archivo temporal se borra de la caché después de compartir, tanto si completas el envío
 como si lo cancelas.</p>
 
 <h2>Copias de seguridad</h2>
 <p>La aplicación declara <code>allowBackup="false"</code>. Android <strong>no</strong>
-incluye tus datos de Resona en la copia de seguridad automática a la nube de Google.</p>
+incluye tus datos de KASIK en la copia de seguridad automática a la nube de Google.</p>
 
 <h2>Contribución voluntaria</h2>
 <p>Si en el futuro se habilita la contribución voluntaria, el cobro se realizará
-íntegramente a través de <strong>Google Play Billing</strong>. Resona no ve, no recibe y
+íntegramente a través de <strong>Google Play Billing</strong>. KASIK no ve, no recibe y
 no almacena datos de pago: los gestiona Google. Contribuir es opcional y <strong>ninguna
 función de la aplicación se limita</strong> por no hacerlo.</p>
 
@@ -133,11 +157,11 @@ desaparecen con ella.</li>
 <p>No hace falta escribir a nadie ni esperar respuesta para ejercer estos derechos.</p>
 
 <h2>Menores de edad</h2>
-<p>Resona no está dirigida específicamente a menores de 13 años y no recoge datos de
+<p>KASIK no está dirigida específicamente a menores de 13 años y no recoge datos de
 ninguna persona, independientemente de su edad.</p>
 
 <h2>Aviso importante sobre salud</h2>
-<p>Resona es una aplicación de bienestar y hábitos. <strong>No es un dispositivo médico,
+<p>KASIK es una aplicación de bienestar y hábitos. <strong>No es un dispositivo médico,
 no proporciona diagnóstico y no sustituye la atención de un profesional de la salud
 mental.</strong> Las inferencias del perfil se presentan siempre como sugerencias
 revisables, nunca como conclusiones clínicas. Si atraviesas una crisis, acude a los
@@ -151,7 +175,7 @@ notas de versión.</p>
 <h2>Contacto</h2>
 <p><strong>Correo:</strong> <a href="mailto:alfxanderjg@gmail.com">alfxanderjg@gmail.com</a></p>
 
-<footer>Resona · Política de privacidad · Última actualización: 2 de agosto de 2026</footer>
+<footer>KASIK · Política de privacidad · Última actualización: 2 de agosto de 2026</footer>
 
 </body>
 </html>
